@@ -1,30 +1,30 @@
-# <span style="color:fuchsia">Zeta Resources</span>
+# Zeta Resources
 
-* ### <span style="color:thistle">About</span>
-* ### <span style="color:thistle">The Zeta Codebase</span>
-* ### <span style="color:thistle">Math for Zeta</span>
-* ### <span style="color:thistle">Physics for Zeta</span>
-* ### <span style="color:thistle">Getting Started with Git and Github</span>
-
-___
-
-## <span style="color:thistle">About</span>
+* ### [About](https://github.com/Salamence064/Zeta-Resources#about-1)
+* ### [The Zeta Codebase](https://github.com/Salamence064/Zeta-Resources#the-zeta-codebase-1)
+* ### [Math for Zeta](https://github.com/Salamence064/Zeta-Resources#math-for-zeta-1)
+* ### [Physics for Zeta](https://github.com/Salamence064/Zeta-Resources#physics-for-zeta-1)
+* ### [Getting Started with Git and Github](https://github.com/Salamence064/Zeta-Resources#getting-started-with-git-and-github-1)
 
 ___
 
-## <span style="color:thistle">The Zeta Codebase</span>
-
-* ##### <span style="color:violet">General Structure</span>
-* ##### <span style="color:violet">ZMath</span>
-* ##### <span style="color:violet">Primitives</span>
-* ##### <span style="color:violet">Rigid and Static Bodies</span>
-* ##### <span style="color:violet">The Physics Handler</span>
-* ##### <span style="color:violet">Important Notes</span>
-* ##### <span style="color:violet">2D Engine to Reference</span>
+## About
 
 ___
 
-#### <span style="color:violet">General Structure</span>
+## The Zeta Codebase
+
+* ##### [General Structure](https://github.com/Salamence064/Zeta-Resources#general-structure-1)
+* ##### [ZMath](https://github.com/Salamence064/Zeta-Resources#zmath-1)
+* ##### [Primitives](https://github.com/Salamence064/Zeta-Resources#primitives-1)
+* ##### [Rigid and Static Bodies](https://github.com/Salamence064/Zeta-Resources#rigid-and-static-bodies-1)
+* ##### [The Physics Handler](https://github.com/Salamence064/Zeta-Resources#the-physics-handler-1)
+* ##### [Important Notes](https://github.com/Salamence064/Zeta-Resources#important-notes-1)
+* ##### [2D Engine to Reference](https://github.com/Salamence064/Zeta-Resources#2d-engine-to-reference-1)
+
+___
+
+#### General Structure
 * **6 Main Sections:**
   1. zmath.h
   2. primitives.h
@@ -35,8 +35,8 @@ ___
 <br>
 
 * **Two Namespaces:**
-  1. ZMath -- contains all the math library code
-  2. Zeta -- contains all the physics related code
+  1. ZMath - contains all the math library code
+  2. Zeta - contains all the physics related code
 <br>
 
 * **Coordinate System Used**
@@ -103,23 +103,27 @@ int main() {
 ```
 ___
 
-#### <span style="color:violet">ZMath</span>
+#### ZMath
 
 ___
 
-#### <span style="color:violet">Primitives</span>
+#### Primitives
 
 ___
 
-#### <span style="color:violet">Rigid and Static Bodies</span>
+#### Rigid and Static Bodies
 
 ___
 
-#### <span style="color:violet">Important Notes</span>
+#### The Physics Handler
 
 ___
 
-#### <span style="color:violet">2D Engine to Reference</span>
+#### Important Notes
+
+___
+
+#### 2D Engine to Reference
 
 * As a reference, check out [Zeta2D](https://github.com/Salamence064/Zeta2D)
 * Zeta2D's a 2D version of our engine that I made
@@ -127,14 +131,14 @@ ___
 * Zeta2D does not have rotational kinematics yet
 ___
 
-## <span style="color:thistle">Math for Zeta</span>
+## Math for Zeta
 
 ___
 
-## <span style="color:thistle">Physics for Zeta</span>
+## Physics for Zeta
 
 ___
 
-## <span style="color:thistle">Getting Started with Git and Github</span>
+## Getting Started with Git and Github
 
 
