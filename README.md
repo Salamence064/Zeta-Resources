@@ -5,10 +5,12 @@
 * ### [Math for Zeta](https://github.com/Salamence064/Zeta-Resources#math-for-zeta-1)
 * ### [Physics for Zeta](https://github.com/Salamence064/Zeta-Resources#physics-for-zeta-1)
 * ### [Getting Started with Git and Github](https://github.com/Salamence064/Zeta-Resources#getting-started-with-git-and-github-1)
+* ### [Contributors](https://github.com/Salamence064/Zeta-Resources#contributors-1)
 
 ___
 
 ## About
+This document is meant to provide all the information someone new to Zeta would need to get started working with the engine. There are basics for math techniques, physics concepts, getting started with git and github, and a general introduction to working with our codebase. You do not need to read all of this but consider it a helpful resource for when you are unsure of how something in the engine works. If you have any questions reach out to Thomas or Utsawb (the PMs) on discord.
 
 ___
 
@@ -180,4 +182,9 @@ ___
 
 ## Getting Started with Git and Github
 
+___
+
+## Contributors
+ * Thomas Ducote
+ * Utsawb Lamichhane
 
