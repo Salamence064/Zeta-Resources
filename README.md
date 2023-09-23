@@ -186,7 +186,16 @@ ___
 ___
 
 #### Important Notes
+* **Efficiency is Top Priority:**
+  * Since this is a physics engine, we want it to be as efficient as possible
+  * Thus, efficiency > readability
+  * Try to avoid divisions and square roots whenever possible in math computations
+<br>
 
+* **Documentation:**
+  * Documenting your code will be essential as there are many people working on thise codebase
+  * Currently, this is done through comments
+  * Eventually, we will also have a documentation site
 ___
 
 #### 2D Engine to Reference
