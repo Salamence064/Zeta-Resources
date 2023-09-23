@@ -107,8 +107,10 @@ ___
 
 #### ZMath
 
-* ZMath is the math library created for use with Zeta
-* There are 5 main components of ZMath:
+* **Math Library Created for Zeta**
+<br>
+
+* **5 Main Components:**
   1. Vec2D
       * Models a 2D vector
       * Used to force a constant z-value with planes
@@ -133,7 +135,7 @@ ___
      * rotateXZ - rotate a point with respect to the XZ plane about an origin
 <br>
 
-* Handling Floating Point Error
+* **Floating Point Error**
   * Floats are imprecise
   * We handle this with a "tolerance"/"ɛ" value
   * If a value is within this tolerance/ɛ of another value, we consider them close enough to be equal
@@ -141,9 +143,12 @@ ___
 ___
 
 #### Primitives
-* Often we can represent simple objects as primitives in a physics engine
-* We can optimize collisions and computations for these specific types as we already know the type going in
-* There are 6 primitives supported by Zeta:
+* **Purpose of Primitives:**
+  * Often we can represent simple objects as primitives in a physics engine
+  * We can optimize collisions and computations for these specific types as we already know the type going in
+<br>
+
+* **6 Supported Primitives:**
   1. Ray3D
   2. Line3D
   3. Plane
@@ -167,6 +172,16 @@ ___
 ___
 
 #### The Physics Handler
+* **What a Physics Handler Does:**
+  * A physics handler takes care of all physics calculations for the user
+  * It updates the rigid bodies based on these calculations
+<br>
+
+* **How to Use:**
+  * The user creates the physics handler and can choose to pass in custom gravity and FPS values
+  * The user then creates rigid and static bodies modeling objects in the program and passes them to the handler
+  * Finally, the user calls the update function in the program's dt loop to perform the physics calculations
+  * Example code can be seen in the [general structure section](https://github.com/Salamence064/Zeta-Resources#general-structure-1)
 
 ___
 
