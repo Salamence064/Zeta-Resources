@@ -105,6 +105,37 @@ ___
 
 #### ZMath
 
+* ZMath is the math library created for use with Zeta
+* There are 5 main components of ZMath:
+  1. Vec2D
+      * Models a 2D vector
+      * Used to force a constant z-value with planes
+  2. Vec3D
+     * Models a 3D vector
+     * Used in almost every part of Zeta
+     * Represents positions, distances, forces, and more
+  3. Mat2D
+     * Models a 2x2 matrix
+     * Is not used in the codebase, but useful to know it exists if needed
+  4. Mat3D
+     * Models a 3x3 matrix
+     * Mainly used to store rotation matrices
+  5. Math Utils
+     * compare - compares equality of two floats or vectors within a given tolerance
+     * clamp - force a value or a vector between a min and a max
+     * abs - take the absolute value of our custom classes
+     * min - return the minimum of two values
+     * max - return the maximum of two values
+     * toRadians - convert an angle from degrees to radians
+     * rotateXY - rotate a point with respect to the XY plane about an origin
+     * rotateXZ - rotate a point with respect to the XZ plane about an origin
+<br>
+
+* Handling Floating Point Error
+  * Floats are imprecise
+  * We handle this with a "tolerance"/"ɛ" value
+  * If a value is within this tolerance/ɛ of another value, we consider them close enough to be equal
+
 ___
 
 #### Primitives
