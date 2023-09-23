@@ -139,7 +139,15 @@ ___
 ___
 
 #### Primitives
-
+* Often we can represent simple objects as primitives in a physics engine
+* We can optimize collisions and computations for these specific types as we already know the type going in
+* There are 6 primitives supported by Zeta:
+  1. Ray3D
+  2. Line3D
+  3. Plane
+  4. Sphere
+  5. AABB (Unrotated Rectangular Prism)
+  6. Cube (Rotated Rectangular Prism)
 ___
 
 #### Rigid and Static Bodies
