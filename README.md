@@ -153,6 +153,16 @@ ___
 ___
 
 #### Rigid and Static Bodies
+* **Rigid vs Static Bodies**
+  * For a physics engine we represent objects as rigid or static bodies
+  * A rigid body is an object that's affected by physics
+  * A static body is one that is not
+<br>
+
+* **A Third Type**
+  * A kinematic body is the third body used in a physics engine
+  * Used to model a player
+  * We plan to implement it this semester
 
 ___
 
