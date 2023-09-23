@@ -193,7 +193,7 @@ ___
 <br>
 
 * **Documentation:**
-  * Documenting your code will be essential as there are many people working on thise codebase
+  * Documenting your code will be essential as there are many people working on this codebase
   * Currently, this is done through comments
   * Eventually, we will also have a documentation site
 ___
