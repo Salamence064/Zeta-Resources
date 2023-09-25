@@ -219,6 +219,51 @@ ___
 
 #### Vectors
 
+* **Why Would I Square the Magnitude or Distance?**
+  * In a physics engine, it's a common tactic to square the magnitude of a vector or the distance between two vectors
+  * This is done as normally computing magnitudes or distances require a square root
+  * However, since square roots are slow, we try to use the squared value of the magnitude and distance in place of the standard value when possible
+  * Example:
+    * Let's say we want to find if a point, $\vec{p}$, is within a distance, $r$, from the center of a sphere, $\vec{c}$
+    * We can do this by finding the distance between $\vec{p}$ and $\vec{c}$ and checking if it's less than or equal to $r$:
+      * $r \geq \sqrt{(\vec{p}_x - \vec{c}_x)^2 + (\vec{p}_y - \vec{c}_y)^2 + (\vec{p}_z - \vec{c}_z)^2}$
+    * We see that this requires a square root to find the distance between the two vectors. However, let's see what happens when we square both sides
+      * $r^2 \geq (\vec{p}_x - \vec{c}_x)^2 + (\vec{p}_y - \vec{c}_y)^2 + (\vec{p}_z - \vec{c}_z)^2$
+    * We've now completely eliminated the square root from our check. This is extremely powerful as it's much faster to compute multiplication than a square root. This mathematical example can be represented with the following code
+```c++
+bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) {
+  ZMath::Vec3D diff = c - p;
+  return r*r <= diff.x*diff.x + diff.y*diff.y + diff.z*diff.z;
+};
+
+// Note: we also have a built-in distSq function which will take the squared distance between two vectors.
+// We can use it to solve this problem as follows
+bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { return r*r <= c.distSq(p); };
+```
+
+<br>
+
+* **Scalar and Vector Pojection**
+  * Vector projection is a tool commonly used in physics engines
+  * It determines the point closest, $\vec{\bar{x}}$ to another point, $\vec{x}$, along a vector, $\vec{v}$, as seen in the diagram below
+  * We can also get the length, $d$, of $\vec{\bar{x}}$ using scalar projection
+  ![](projectionDiagram.jpg)
+  * The equation for vector projection is $proj_{\vec{v}}\vec{u} = \frac{(\vec{u} \cdot \vec{v})}{(\vec{v} \cdot \vec{v})}\vec{v} = \frac{(\vec{u} \cdot \vec{v})}{||\vec{v}||^2}\vec{v}$
+  * This will calculate the projection of $\vec{u}$ onto $\vec{v}$
+  * And the equation for scalar projection is $comp_{\vec{v}}\vec{u} = \frac{(\vec{u} \cdot \vec{v})}{||\vec{v}||}$
+  * This will calculate the scalar projection of $\vec{u}$ onto $\vec{v}$
+<br>
+
+* **Normal Vectors**
+  * A normal vector—also called a normalized vector—is a vector with a magnitude of 1
+  * Useful for vector projections as they have a magnitude of 1 which allows us to compute it much quicker
+  * It's even more useful for scalar projections as we do not need to take the square root to calculate the magnitude of the vector anymore. This eliminates an entire square root
+  * We can also multiply it by any scalar, $c$, and get a vector of length $c$ in the direction of the normal vector
+  * Despite these bonuses, normal vectors take a square root to calculate, and, thus, are avoided when possible
+<br>
+
+* **"Walking" Along a Vector**
+  * 
 
 ___
 
