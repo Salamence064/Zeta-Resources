@@ -247,13 +247,14 @@ bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { retu
   * Vector projection is a tool commonly used in physics engines
   * It determines the point closest, $\vec{\bar{x}}$ to another point, $\vec{x}$, along a vector, $\vec{v}$, as seen in the diagram below
   * We can also get the length, $d$, of $\vec{\bar{x}}$ using scalar projection
-  
-  ![](projectionDiagram.jpg)
-
   * The equation for vector projection is $proj_{\vec{v}}\vec{u} = \frac{(\vec{u} \cdot \vec{v})}{(\vec{v} \cdot \vec{v})}\vec{v} = \frac{(\vec{u} \cdot \vec{v})}{||\vec{v}||^2}\vec{v}$
   * This will calculate the projection of $\vec{u}$ onto $\vec{v}$
   * And the equation for scalar projection is $comp_{\vec{v}}\vec{u} = \frac{(\vec{u} \cdot \vec{v})}{||\vec{v}||}$
   * This will calculate the scalar projection of $\vec{u}$ onto $\vec{v}$
+<br>
+
+![](projectionDiagram.jpg)
+
 <br>
 
 * **Normal Vectors**
