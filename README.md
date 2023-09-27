@@ -252,9 +252,9 @@ bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { retu
   * And the equation for scalar projection is $comp_{\vec{v}}\vec{u} = \frac{(\vec{u} \cdot \vec{v})}{||\vec{v}||}$
   * This will calculate the scalar projection of $\vec{u}$ onto $\vec{v}$
 <br>
-<center>
+<p align="center">
 <img src="projectionDiagram.jpg" width="350" height="350">
-</center>
+</p>
 <br>
 <br>
 
@@ -271,9 +271,9 @@ bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { retu
   * This can be accomplished by dividing our vector by its magnitude and multiplying it by the distance, $d$, to the point we want to travel to. Written mathematically as $\vec{w}=\vec{v} \cdot \frac{d}{||\vec{v}||}$
   * A visual of what this is doing is shown below
 
-<center>
+<p align="center">
 <img src="vectorWalkingDiagram.jpg" width="550">
-</center>
+</p>
 
 ___
 
@@ -305,7 +305,10 @@ ___
 
 * **Orthogonal Matrices**
   * A matrix whose column and row vectors are orthogonal unit vectors
-  * For othogonal matrices: $\\A^T = A^{-1} \\ A^TA = AA^T = I \\ (A+B)^T = A^T+B^T$
+  * For othogonal matrices:
+    * $\\A^T = A^{-1}$
+    * $A^TA = AA^T = I$
+    * $(A+B)^T = A^T+B^T$
   * These are extremely useful for a physics engine as transposes are much faster to compute than inverses
   * We will likely only deal with orthogonal matrices
   * If you would like a more in depth dive into orthognal matrices, check out this [document](https://people.math.harvard.edu/~knill/teaching/math22b2019/handouts/lecture08.pdf)
@@ -344,7 +347,10 @@ ___
 
     <br>
 
-    3. One about the y-axis:<br><br>$\begin{vmatrix}
+    3. One about the y-axis:
+    <br>
+    
+    $\begin{vmatrix}
       \;\;\;\cos\theta & 0 & \sin\theta \\
       0 & 1 & 0 \\
       -\sin\theta & 0 & \cos\theta
@@ -368,9 +374,9 @@ ___
   * Many of these types of problems require a couple clever observations to solve them, so do not be discouraged if you are unable to solve them quickly
   * Visual example for how we can use analytic geometry to see if a ray and sphere are intersecting
 <br>
-<center>
+<p align="center">
 <img src="analyticGeometryExample.jpg" width="500">
-</center>
+</p>
 <br>
 
 For this example, we first take the scalar projection of $\vec{pc}$ onto $\vec{dir}$. This gets us the distance value, $t$, to the closest point to $\vec{c}$ along $\vec{dir}$. Next, we multiply $\vec{dir}$ by $t$ to obtain our closest point, $\vec{x}$. Now, all we need to do to see if the ray and sphere are intersecting it to first, make sure $t$ is not negative, and second, see if the distance from $\vec{x}$ to $\vec{c}$ is less than or equal to $r$. If you wish to see code using this solution, look at the `bool raycast(Sphere const &sphere, Ray3D const &ray, float &dist);` function in `include/zeta/intersections.h`
