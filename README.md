@@ -315,9 +315,10 @@ ___
 <br>
 
 * **2D Rotation Matrices**
-  * A matrix which will rotate any 2D vector by an angle of $\theta$ about $\begin{vmatrix}
-    0 \\\ 0
-  \end{vmatrix}$
+  * A matrix which will rotate any 2D vector by an angle of $\theta$ about ```math
+  $\begin{vmatrix}
+    0 \\ 0
+  \end{vmatrix}$```
   * This matrix can be constructed as $\begin{vmatrix} \cos\theta & -\sin\theta \\\ \sin\theta & \;\;\;\cos\theta \end{vmatrix}$
   * 2D rotation matrices are always orthogonal matrices
   * You can call `Mat2D::rotationMat(float theta)` in Zeta to generate a 2D rotation matrix for the specified angle
