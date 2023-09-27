@@ -315,45 +315,44 @@ ___
 <br>
 
 * **2D Rotation Matrices**
-  * A matrix which will rotate any 2D vector by an angle of $\theta$ about $\left[0\atop 0\right]$
-  * This matrix can be constructed as $$\begin{vmatrix}
-    0&0\\0&0
-  \end{vmatrix}$$
+  * A matrix which will rotate any 2D vector by an angle of $\theta$ about (0, 0)
+  * This matrix can be constructed as
+
+<p align="center">
+<img src="rotation2D.svg">
+</p>
+
   * 2D rotation matrices are always orthogonal matrices
   * You can call `Mat2D::rotationMat(float theta)` in Zeta to generate a 2D rotation matrix for the specified angle
 <br>
 
 * **3D Rotation Matrices**
-  * A matrix which will rotate any 3D vector by an angle of $\theta$ about $\begin{vmatrix}
-    0 \\ 0 \\ 0
-  \end{vmatrix}$
+  * A matrix which will rotate any 3D vector by an angle of $\theta$ about (0, 0, 0)
   * There are 3 different 3D rotation matrices:
-    1. Rotate about the z-axis: <br><br>$\begin{vmatrix}
-      \cos\theta & -\sin\theta & 0 \\
-      \sin\theta & \;\;\;\cos\theta & 0 \\
-      0 & 0 & 1
-    \end{vmatrix}$
+    1. Rotate about the z-axis:
 
     <br>
-
-    2. One about the x-axis: <br><br>$\begin{vmatrix}
-      1 & 0 & 0 \\
-      0 & \cos\theta & -\sin\theta \\
-      0 & \sin\theta & \;\;\;\cos\theta
-    \end{vmatrix}$
-
+    <p align="center">
+    <img src="zRotation3D.svg">
+    </p>
     <br>
 
-    3. One about the y-axis:
-    <br>
-    
-    $\begin{vmatrix}
-      \;\;\;\cos\theta & 0 & \sin\theta \\
-      0 & 1 & 0 \\
-      -\sin\theta & 0 & \cos\theta
-    \end{vmatrix}$
+    2. Rotate about the x-axis
 
     <br>
+    <p align="center">
+    <img src="xRotation3D.svg">
+    </p>
+    <br>
+
+    3. Rotate about the y-axis:
+
+    <br>
+    <p align="center">
+    <img src="yRotation3D.svg">
+    </p>
+    <br>
+
   * For our case we only need the matrices about the z-axis and y-axis although we do have function calls for all three
   * We can generate a 3D rotation matrix in Zeta by calling `Mat3D::rotationMat(float theta, float phi)` where theta is the angle with respect to the XY plane and phi is the angle with respect to the XZ plane
 ___
