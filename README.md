@@ -269,6 +269,8 @@ bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { retu
   * This can be accomplished by dividing our vector by its magnitude and multiplying it by the distance, $d$, to the point we want to travel to. Written mathematically as $\vec{w}=\vec{v} \cdot \frac{d}{||\vec{v}||}$
   * A visual of what this is doing is shown below
 
+![](vectorWalkingDiagram.jpg)
+
 ___
 
 #### Matrices
