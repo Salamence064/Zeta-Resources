@@ -348,6 +348,16 @@ ___
 
 #### Analytic Geometry
 
+* **What is Analytic Geometry?**
+  * Analytic geometry is essentially using algebraic tecniques to solve geometrical problems
+  * This is very useful for us as a computer can do algebra really well but is slower when it comes to pure geometry
+<br>
+
+* **How Can I Approach These Types of Prolems?**
+  * A common strategy is to draw a diagram of the problem as this helps you visualize what you're trying to solve for
+  * You will use techniques like scalar and vector projection, walking along a vector, and taking advantage of the fact that rotation matrices are orthogonal
+  * Many of these types of problems require a couple clever observations to solve them, so do not be discouraged if you are unable to solve them quickly
+  * Visual example for how we can use analytic geometry to see if a ray and sphere are intersecting
 
 
 ___
