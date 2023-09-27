@@ -316,40 +316,40 @@ ___
 
 * **2D Rotation Matrices**
   * A matrix which will rotate any 2D vector by an angle of $\theta$ about (0, 0)
-  * This matrix can be constructed as
-
-  <p align="center">
-  <img src="rotation2D.svg">
-  </p>
-
   * 2D rotation matrices are always orthogonal matrices
   * You can call `Mat2D::rotationMat(float theta)` in Zeta to generate a 2D rotation matrix for the specified angle
+  * This matrix can be constructed as
+
+<p align="center">
+<img src="rotation2D.svg">
+</p>
+
 <br>
 
 * **3D Rotation Matrices**
   * A matrix which will rotate any 3D vector by an angle of $\theta$ about (0, 0, 0)
-  * There are 3 different 3D rotation matrices
-  1. Rotatation about the z-axis
+  * There are 3 different 3D rotation matrices—one for each axis
+  * For our case we only need the matrices about the z-axis and y-axis although we do have function calls for all three
+  * We can generate a 3D rotation matrix in Zeta by calling `Mat3D::rotationMat(float theta, float phi)` where theta is the angle with respect to the XY plane and phi is the angle with respect to the XZ plane
+  * You can construct the 3D rotation matrices as follows:
+    1. Rotatation about the z-axis
 
 <p align="center">
 <img src="zRotation3D.svg">
 </p>
 
-  2. Rotatation about the x-axis
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. Rotatation about the x-axis
 
 <p align="center">
 <img src="xRotation3D.svg">
 </p>
 
-  3. Rotatation about the y-axis
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. Rotatation about the y-axis
 
 <p align="center">
 <img src="yRotation3D.svg">
 </p>
 
-
-  * For our case we only need the matrices about the z-axis and y-axis although we do have function calls for all three
-  * We can generate a 3D rotation matrix in Zeta by calling `Mat3D::rotationMat(float theta, float phi)` where theta is the angle with respect to the XY plane and phi is the angle with respect to the XZ plane
 ___
 
 #### Analytic Geometry
