@@ -328,18 +328,20 @@ ___
 
 * **3D Rotation Matrices**
   * A matrix which will rotate any 3D vector by an angle of $\theta$ about (0, 0, 0)
-  * There are 3 different 3D rotation matrices (pictured in their respective order):
-    1. Rotatation about the z-axis
-    2. Rotatation about the x-axis
-    3. Rotatation about the y-axis
+  * There are 3 different 3D rotation matrices
+  1. Rotatation about the z-axis
 
 <p align="center">
 <img src="zRotation3D.svg">
 </p>
 
+  2. Rotatation about the x-axis
+
 <p align="center">
 <img src="xRotation3D.svg">
 </p>
+
+  3. Rotatation about the y-axis
 
 <p align="center">
 <img src="yRotation3D.svg">
