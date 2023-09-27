@@ -318,9 +318,9 @@ ___
   * A matrix which will rotate any 2D vector by an angle of $\theta$ about (0, 0)
   * This matrix can be constructed as
 
-<p align="center">
-<img src="rotation2D.svg">
-</p>
+  <p align="center">
+  <img src="rotation2D.svg">
+  </p>
 
   * 2D rotation matrices are always orthogonal matrices
   * You can call `Mat2D::rotationMat(float theta)` in Zeta to generate a 2D rotation matrix for the specified angle
