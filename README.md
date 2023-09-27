@@ -252,7 +252,9 @@ bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { retu
   * And the equation for scalar projection is $comp_{\vec{v}}\vec{u} = \frac{(\vec{u} \cdot \vec{v})}{||\vec{v}||}$
   * This will calculate the scalar projection of $\vec{u}$ onto $\vec{v}$
 <br>
+<center>
 <img src="projectionDiagram.jpg" width="350" height="350">
+</center>
 <br>
 <br>
 
@@ -269,7 +271,9 @@ bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { retu
   * This can be accomplished by dividing our vector by its magnitude and multiplying it by the distance, $d$, to the point we want to travel to. Written mathematically as $\vec{w}=\vec{v} \cdot \frac{d}{||\vec{v}||}$
   * A visual of what this is doing is shown below
 
+<center>
 <img src="vectorWalkingDiagram.jpg" width="550">
+</center>
 
 ___
 
@@ -329,18 +333,23 @@ ___
       \sin\theta & \;\;\;\cos\theta & 0 \\
       0 & 0 & 1
     \end{vmatrix}$
+
     <br>
+
     2. One about the x-axis: <br><br>$\begin{vmatrix}
       1 & 0 & 0 \\
       0 & \cos\theta & -\sin\theta \\
       0 & \sin\theta & \;\;\;\cos\theta
     \end{vmatrix}$
+
     <br>
+
     3. One about the y-axis:<br><br>$\begin{vmatrix}
       \;\;\;\cos\theta & 0 & \sin\theta \\
       0 & 1 & 0 \\
       -\sin\theta & 0 & \cos\theta
     \end{vmatrix}$
+
     <br>
   * For our case we only need the matrices about the z-axis and y-axis although we do have function calls for all three
   * We can generate a 3D rotation matrix in Zeta by calling `Mat3D::rotationMat(float theta, float phi)` where theta is the angle with respect to the XY plane and phi is the angle with respect to the XZ plane
@@ -358,9 +367,10 @@ ___
   * You will use techniques like scalar and vector projection, walking along a vector, and taking advantage of the fact that rotation matrices are orthogonal
   * Many of these types of problems require a couple clever observations to solve them, so do not be discouraged if you are unable to solve them quickly
   * Visual example for how we can use analytic geometry to see if a ray and sphere are intersecting
-
-<img src="analyticGeometryExample.jpg" width="500">
 <br>
+<center>
+<img src="analyticGeometryExample.jpg" width="500">
+</center>
 <br>
 
 For this example, we first take the scalar projection of $\vec{pc}$ onto $\vec{dir}$. This gets us the distance value, $t$, to the closest point to $\vec{c}$ along $\vec{dir}$. Next, we multiply $\vec{dir}$ by $t$ to obtain our closest point, $\vec{x}$. Now, all we need to do to see if the ray and sphere are intersecting it to first, make sure $t$ is not negative, and second, see if the distance from $\vec{x}$ to $\vec{c}$ is less than or equal to $r$. If you wish to see code using this solution, look at the `bool raycast(Sphere const &sphere, Ray3D const &ray, float &dist);` function in `include/zeta/intersections.h`
