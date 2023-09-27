@@ -269,7 +269,7 @@ bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { retu
   * This can be accomplished by dividing our vector by its magnitude and multiplying it by the distance, $d$, to the point we want to travel to. Written mathematically as $\vec{w}=\vec{v} \cdot \frac{d}{||\vec{v}||}$
   * A visual of what this is doing is shown below
 
-![](vectorWalkingDiagram.jpg)
+<img src="vectorWalkingDiagram.jpg" width="550">
 
 ___
 
@@ -359,6 +359,11 @@ ___
   * Many of these types of problems require a couple clever observations to solve them, so do not be discouraged if you are unable to solve them quickly
   * Visual example for how we can use analytic geometry to see if a ray and sphere are intersecting
 
+<img src="analyticGeometryExample.jpg" width="500">
+<br>
+<br>
+
+For this example, we first take the scalar projection of $\vec{pc}$ onto $\vec{dir}$. This gets us the distance value, $t$, to the closest point to $\vec{c}$ along $\vec{dir}$. Next, we multiply $\vec{dir}$ by $t$ to obtain our closest point, $\vec{x}$. Now, all we need to do to see if the ray and sphere are intersecting it to first, make sure $t$ is not negative, and second, see if the distance from $\vec{x}$ to $\vec{c}$ is less than or equal to $r$. If you wish to see code using this solution, look at the `bool raycast(Sphere const &sphere, Ray3D const &ray, float &dist);` function in `include/zeta/intersections.h`
 
 ___
 
