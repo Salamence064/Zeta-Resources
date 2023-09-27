@@ -1,4 +1,4 @@
-# Zeta Resources
+# <p style="color:hotpink">Zeta Resources</p>
 
 * ### [About](https://github.com/Salamence064/Zeta-Resources#about-1)
 * ### [The Zeta Codebase](https://github.com/Salamence064/Zeta-Resources#the-zeta-codebase-1)
@@ -306,7 +306,7 @@ ___
 * **Orthogonal Matrices**
   * A matrix whose column and row vectors are orthogonal unit vectors
   * For othogonal matrices:
-    * $\\A^T = A^{-1}$
+    * $A^T = A^{-1}$
     * $A^TA = AA^T = I$
     * $(A+B)^T = A^T+B^T$
   * These are extremely useful for a physics engine as transposes are much faster to compute than inverses
@@ -318,10 +318,7 @@ ___
   * A matrix which will rotate any 2D vector by an angle of $\theta$ about $\begin{vmatrix}
     0 \\ 0
   \end{vmatrix}$
-  * This matrix can be constructed as $\begin{vmatrix}
-    \cos\theta & -\sin\theta \\
-    \sin\theta & \;\;\;\cos\theta
-  \end{vmatrix}$
+  * This matrix can be constructed as $\begin{vmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \;\;\;\cos\theta \end{vmatrix}$
   * 2D rotation matrices are always orthogonal matrices
   * You can call `Mat2D::rotationMat(float theta)` in Zeta to generate a 2D rotation matrix for the specified angle
 <br>
