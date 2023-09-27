@@ -252,13 +252,12 @@ bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { retu
   * And the equation for scalar projection is $comp_{\vec{v}}\vec{u} = \frac{(\vec{u} \cdot \vec{v})}{||\vec{v}||}$
   * This will calculate the scalar projection of $\vec{u}$ onto $\vec{v}$
 <br>
-
-![](projectionDiagram.jpg)
-
+<img src="projectionDiagram.jpg" width="350" height="350">
+<br>
 <br>
 
 * **Normal Vectors**
-  * A normal vector—also called a normalized vector—is a vector with a magnitude of 1
+  * A normal vector—also called a unit or normalized vector—is a vector with a magnitude of 1
   * Useful for vector projections as they have a magnitude of 1 which allows us to compute it much quicker
   * It's even more useful for scalar projections as we do not need to take the square root to calculate the magnitude of the vector anymore. This eliminates an entire square root
   * We can also multiply it by any scalar, $c$, and get a vector of length $c$ in the direction of the normal vector
@@ -266,26 +265,87 @@ bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { retu
 <br>
 
 * **"Walking" Along a Vector**
-  * 
+  * Walking along a vector is a fancy way to say that we're traveling to a point along a vector a specific distance from that vector's origin
+  * This can be accomplished by dividing our vector by its magnitude and multiplying it by the distance, $d$, to the point we want to travel to. Written mathematically as $\vec{w}=\vec{v} \cdot \frac{d}{||\vec{v}||}$
+  * A visual of what this is doing is shown below
 
 ___
 
 #### Matrices
 
+* **What is a Matrix?**
+  * A matrix is similar to a 2D array
+  * It models a system and is composed of a certain number of rows and columns
+  * These rows and columns can be represented by what we call row and column vectors
+<br>
 
+* **Why Matrices?**
+  * Matrices are very useful for performing calculations with vectors
+  * Makes the code more succinct and the algorithm more efficient
+  * We can also use matrices to rotate a vector in 2D or 3D space and we can even store those rotation matrices so we only have to compute them once
+<br>
+
+* **Transpose**
+  * Obtained by taking the column vectors of your matrix and making them row vectors for this new matrix
+  * Denoated as $A^T$
+  * Useful for matrix projections (you do not need to know how to do these) and for orthogonal matrices, which are covered in a later section
+<br>
+
+* **Inverse**
+  * Denoted as $A^{-1}$
+  * Let $A$ be a square matrix. The inverse matrix, $A^{-1}$, is a matrix such that $AA^{-1} = I$ where $I$ is the identity matrix
+  * We will primarily use these for rotations
+<br>
+
+* **Orthogonal Matrices**
+  * A matrix whose column and row vectors are orthogonal unit vectors
+  * For othogonal matrices: $\\A^T = A^{-1} \\ A^TA = AA^T = I \\ (A+B)^T = A^T+B^T$
+  * These are extremely useful for a physics engine as transposes are much faster to compute than inverses
+  * We will likely only deal with orthogonal matrices
+  * If you would like a more in depth dive into orthognal matrices, check out this [document](https://people.math.harvard.edu/~knill/teaching/math22b2019/handouts/lecture08.pdf)
+<br>
+
+* **2D Rotation Matrices**
+  * A matrix which will rotate any 2D vector by an angle of $\theta$ about $\begin{vmatrix}
+    0 \\ 0
+  \end{vmatrix}$
+  * This matrix can be constructed as $\begin{vmatrix}
+    \cos\theta & -\sin\theta \\
+    \sin\theta & \;\;\;\cos\theta
+  \end{vmatrix}$
+  * 2D rotation matrices are always orthogonal matrices
+  * You can call `Mat2D::rotationMat(float theta)` in Zeta to generate a 2D rotation matrix for the specified angle
+<br>
+
+* **3D Rotation Matrices**
+  * A matrix which will rotate any 3D vector by an angle of $\theta$ about $\begin{vmatrix}
+    0 \\ 0 \\ 0
+  \end{vmatrix}$
+  * There are 3 different 3D rotation matrices:
+    1. Rotate about the z-axis: <br><br>$\begin{vmatrix}
+      \cos\theta & -\sin\theta & 0 \\
+      \sin\theta & \;\;\;\cos\theta & 0 \\
+      0 & 0 & 1
+    \end{vmatrix}$
+    <br>
+    2. One about the x-axis: <br><br>$\begin{vmatrix}
+      1 & 0 & 0 \\
+      0 & \cos\theta & -\sin\theta \\
+      0 & \sin\theta & \;\;\;\cos\theta
+    \end{vmatrix}$
+    <br>
+    3. One about the y-axis:<br><br>$\begin{vmatrix}
+      \;\;\;\cos\theta & 0 & \sin\theta \\
+      0 & 1 & 0 \\
+      -\sin\theta & 0 & \cos\theta
+    \end{vmatrix}$
+    <br>
+  * For our case we only need the matrices about the z-axis and y-axis although we do have function calls for all three
+  * We can generate a 3D rotation matrix in Zeta by calling `Mat3D::rotationMat(float theta, float phi)` where theta is the angle with respect to the XY plane and phi is the angle with respect to the XZ plane
 ___
 
 #### Analytic Geometry
 
-
-___
-
-#### Breaking Down Problems
-
-
-___
-
-#### Mathematical Problem-Solving Techniques
 
 
 ___
