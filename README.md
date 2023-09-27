@@ -328,30 +328,23 @@ ___
 
 * **3D Rotation Matrices**
   * A matrix which will rotate any 3D vector by an angle of $\theta$ about (0, 0, 0)
-  * There are 3 different 3D rotation matrices:
-    1. Rotate about the z-axis:
+  * There are 3 different 3D rotation matrices (pictured in their respective order):
+    1. Rotatation about the z-axis
+    2. Rotatation about the x-axis
+    3. Rotatation about the y-axis
 
-    <br>
-    <p align="center">
-    <img src="zRotation3D.svg">
-    </p>
-    <br>
+<p align="center">
+<img src="zRotation3D.svg">
+</p>
 
-    2. Rotate about the x-axis
+<p align="center">
+<img src="xRotation3D.svg">
+</p>
 
-    <br>
-    <p align="center">
-    <img src="xRotation3D.svg">
-    </p>
-    <br>
+<p align="center">
+<img src="yRotation3D.svg">
+</p>
 
-    3. Rotate about the y-axis:
-
-    <br>
-    <p align="center">
-    <img src="yRotation3D.svg">
-    </p>
-    <br>
 
   * For our case we only need the matrices about the z-axis and y-axis although we do have function calls for all three
   * We can generate a 3D rotation matrix in Zeta by calling `Mat3D::rotationMat(float theta, float phi)` where theta is the angle with respect to the XY plane and phi is the angle with respect to the XZ plane
