@@ -375,7 +375,38 @@ For this example, we first take the scalar projection of $\vec{pc}$ onto $\vec{d
 ___
 
 ## Physics for Zeta
-
+___
+### Introduction
+The physics section is broken down into two big sections, Linear and Rotational motion. Both are equally important for a physics engine, however as we will soon see, rotational usually ends up being the harder of the two.
+___
+### Linear Motion
+We start off with a function that takes in time and outputs position
+<br>
+$x(t)$. As we have learned in calculus, to get velocity we can derive this function
+<br>
+$v(t) = \frac{d}{dt} x(t)$. We do this one final time to get the Acceleration $a(t) = \frac{d}{dt} v(t)$
+<br>
+Using the acceleration we can get to Force via $F = m \cdot a(t)$.
+<br>
+Finnaly we have reached an equation that of use. However there are still a couple more derivations to make before we can continue on with the engine.
+<br>
+By definition momentum is $p = m \cdot v$. If we derive this function we get $\frac{dp}{dt} = m \cdot a$. Now with this equation and the ones before it, we can derive what will soon be
+the bread and butter of how a physics engine works.
+<br>
+$\frac{dp}{dt} = F$
+<br>
+$I = \int_{t_i}^{t_f}{F(t) \cdot dt}$
+<br>
+We define this integral as Impulse, more formally known as the change in momentum. We use Impulse to convey information about what forces an object is feeling, and how to respond to them. This method of solving physics world is known as Impulse Resolution, and is how our physics engine works at its core.
+#### Friction
+Just before we move onto rotational motion, we need to make a quick stop to Friction. This might seem like a weird thing to emphasis, however without friction, nothing would ever stop. So some form of friction,
+or some way to bleed momentum is a must for a physics engine.
+<br>
+The friction that an object feels while moving will be depended on the material of the object, and the material of that it is moving on. To simplify our lives, we usually set a $\mu$, or Friction Coefficent, by hand.
+Using this constant, we can calculate the frictional force that an object feels while in movment with the following equation. $F_{fr} = \mu \cdot F_{\perp}$. Where $F_{\perp}$ is the normal force of the object, that is applied by the surface. For a flat surface the normal force would be $F_{\perp} = m \cdot g$ where g is the gravatational constant.
+___
+### Rotational Motion
+This is where the physics gets hard to follow, but as long as we make sure to draw analogs to the Linear equations, the math will work out very simmilar.
 ___
 
 ## Getting Started with Git and Github
