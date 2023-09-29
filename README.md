@@ -395,7 +395,7 @@ the bread and butter of how a physics engine works.
 <br>
 $\frac{dp}{dt} = F$
 <br>
-$I = \int_{t_i}^{t_f}{F(t) \cdot dt}$
+$j = \int_{t_i}^{t_f}{F(t) \cdot dt}$
 <br>
 We define this integral as Impulse, more formally known as the change in momentum. We use Impulse to convey information about what forces an object is feeling, and how to respond to them. This method of solving physics world is known as Impulse Resolution, and is how our physics engine works at its core.
 #### Friction
@@ -406,7 +406,24 @@ The friction that an object feels while moving will be depended on the material 
 Using this constant, we can calculate the frictional force that an object feels while in movment with the following equation. $F_{fr} = \mu \cdot F_{\perp}$. Where $F_{\perp}$ is the normal force of the object, that is applied by the surface. For a flat surface the normal force would be $F_{\perp} = m \cdot g$ where g is the gravatational constant.
 ___
 ### Rotational Motion
-This is where the physics gets hard to follow, but as long as we make sure to draw analogs to the Linear equations, the math will work out very simmilar.
+This is where the physics gets hard to follow, but as long as we make sure to draw analogs to the Linear equations, the math will work out.
+<br>
+Just as Linear Motion had $x(t)$, Rotational Motion has $\theta(t)$, where this theta represents an angular position instead of a linear one.
+<br>
+$v(t)$ becomes $\omega(t)$, this is called the angular velocity
+<br>
+$a(t)$ becomes $\alpha(t)$ which is the angular acceleration.
+<br>
+$F = m \cdot a$ becomes $\tau = I \cdot \alpha$ where $\tau$ is the Torque, and $I$ is the Rotational Inertia.
+<br>
+$L = I \cdot \omega$ Where L is the angular momentum.
+<br>
+Now that those are out of the way, we need a way to bridge the gap between Linear motion and Angular Motion, that is most easily done by turning our previous values into vectors in 3D space, and using cross products.
+<br>
+$\vec{L} = \vec{r} \times \vec{p}$, where $\vec{r}$ is a vector pointing from the axis of rotation to the point of impulse.
+<br>
+Now that we have connected Angular Momentum back to Impulse, the nitty gritty physics is finished, and we go back into analytical geometry to figure out where the axis of rotation is, along with everything else in the
+collision manifold.
 ___
 
 ## Getting Started with Git and Github
