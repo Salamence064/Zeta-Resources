@@ -427,7 +427,17 @@ collision manifold.
 ___
 
 ## Getting Started with Git and Github
-
+Before you begin working on the engine, make sure you have sent us your GitHub username, so that you have access to the repo!
+<br>
+* **Steps to clone the repo**
+* 1. Run ```git clone https://github.com/aggie-coding-club/Zeta-Physics-Engine.git ``` in your terminal, make sure to cd into where you want it downloaded
+  2. After you have been added to the repo, head to the repo on github and look for the issue titled "My first pull request" ![](https://cdn.discordapp.com/attachments/1074022993610670160/1077699769356529794/image.png?ex=651a89df&is=6519385f&hm=159719a38e315f7939c9fc1048a445b2b02010cc0a5c359b98bd344f304e0c11&)
+  3. On the ride side column under where it says Development, click on the gear, then create a new branch. Please make sure to name it something reasonable, in this case since everyone is responding to the same issue, follow the format of first_pr_YOURNAME ![](https://media.discordapp.net/attachments/1074022993610670160/1077702227906543658/image.png?ex=651a8c29&is=65193aa9&hm=4199008fcc1c9010c1d908c42193e86cad923f49f2c75dcfa14532aa6317bc9a&=&width=736&height=670)
+  4. Then as the text suggests, go back to your repo in the terminal and run ```git fetch origin``` ```git checkout YOUR_BRANCH``` ```git pull```
+  5. Now is the point where you can contribute by editing the local files on your pc. In this simple example go and find the README.md and add your name to the bottom.
+  6.  Once you are done with your changes locally, do ```git add .``` ```git commit -m "A meaningful messages that explains what you changed"``` ```git push```
+  7.  Finally write a comment on the issue to tell everyone that you have finished it, and that its ready for merging. ![](https://media.discordapp.net/attachments/1074022993610670160/1077707403627348089/image.png?ex=651a90fb&is=65193f7b&hm=8322a86f752bd87701ea49770626c026acd3d579761dc773b14d31e9736b2105&=&width=1262&height=701)
+  8.  If there is a change that needs to be made, we will post it under the Pull Request tab on github. The rest of the merging process will be done by me or thomas
 ___
 
 ## Contributors
