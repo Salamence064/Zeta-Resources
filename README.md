@@ -211,9 +211,6 @@ ___
 * ##### [Vectors](https://github.com/Salamence064/Zeta-Resources#vectors-1)
 * ##### [Matrices](https://github.com/Salamence064/Zeta-Resources#matrices-1)
 * ##### [Analytic Geometry](https://github.com/Salamence064/Zeta-Resources#analytic-geometry-1)
-* ##### [Breaking Down Problems](https://github.com/Salamence064/Zeta-Resources#breaking-down-problems-1)
-* ##### [Mathematical Problem-Solving Techniques](https://github.com/Salamence064/Zeta-Resources#mathematical-problem-solving-techniques-1)
-
 
 ___
 
