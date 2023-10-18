@@ -230,12 +230,12 @@ ___
 ```c++
 bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) {
   ZMath::Vec3D diff = c - p;
-  return r*r <= diff.x*diff.x + diff.y*diff.y + diff.z*diff.z;
+  return r*r >= diff.x*diff.x + diff.y*diff.y + diff.z*diff.z;
 };
 
 // Note: we also have a built-in distSq function which will take the squared distance between two vectors.
 // We can use it to solve this problem as follows
-bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { return r*r <= c.distSq(p); };
+bool PointInSphere(ZMath::Vec3D const &p, ZMath::Vec3D const &c, float r) { return r*r >= c.distSq(p); };
 ```
 
 <br>
